@@ -133,6 +133,14 @@ describe(`Color`, function () {
     )
     expect(Color.fromHsla([0, 0, 100, 1]).toHexString()).to.equal('#ffffff')
     expect(Color.fromHsla([0, 0, 100, 0.5]).toHexString()).to.equal('#ffffff7f')
+    expect(new Color([0, 0, 0, 0]).toRgbaArray()).to.deep.equal([0, 0, 0, 0])
+    expect(new Color('rgba(0, 0, 0, 0)').toRgbaArray()).to.deep.equal([
+      0, 0, 0, 0,
+    ])
+    expect(new Color([3, 2, 1, 0]).toRgbaArray()).to.deep.equal([3, 2, 1, 0])
+    expect(new Color('rgba(3, 2, 1, 0)').toRgbaArray()).to.deep.equal([
+      3, 2, 1, 0,
+    ])
     expect(() => new Color('nonsense')).to.throw('invalid css color: nonsense')
   })
 })
