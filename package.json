@@ -1,0 +1,65 @@
+{
+  "name": "@jcoreio/css-color-converter",
+  "version": "0.0.0-development",
+  "description": "Converts CSS colors from one representation to another",
+  "scripts": {
+    "tc": "toolchain",
+    "toolchain": "toolchain",
+    "test": "toolchain test",
+    "prepublishOnly": "echo This package is meant to be published by semantic-release from the dist build directory. && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcoreio/css-color-converter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jcoreio/css-color-converter/issues"
+  },
+  "homepage": "https://github.com/jcoreio/css-color-converter",
+  "keywords": [
+    "css",
+    "color",
+    "conversions",
+    "converter"
+  ],
+  "author": "Andy Edwards",
+  "license": "MIT",
+  "devDependencies": {
+    "@jcoreio/eslint-plugin-implicit-dependencies": "^1.1.1",
+    "@jcoreio/toolchain": "^3.11.0",
+    "@jcoreio/toolchain-circle": "^3.11.0",
+    "@jcoreio/toolchain-esnext": "^3.11.0",
+    "@jcoreio/toolchain-mocha": "^3.11.0",
+    "@jcoreio/toolchain-semantic-release": "^3.11.0",
+    "@jcoreio/toolchain-typescript": "^3.11.0",
+    "@types/chai": "^4.0.0",
+    "@types/color-name": "^1.1.4",
+    "@types/mocha": "^10.0.6",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
+    "chai": "^4.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-no-only-tests": "^3.1.0",
+    "mocha": "^10.4.0",
+    "typescript": "^5.1.0"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=16"
+  },
+  "packageManager": "pnpm@8.11.0",
+  "dependencies": {
+    "@babel/runtime": "^7.18.6"
+  }
+}
